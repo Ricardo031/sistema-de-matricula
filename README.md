@@ -19,7 +19,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 Una aplicación web moderna para la gestión y manipulación de matrículas estudiantiles, desarrollada con React y Tailwind CSS.
 
-## 🚀 Características Principales
+##  Características Principales
 
 - **Autenticación de Estudiantes**: Login seguro con ID de estudiante
 - **Gestión de Matrículas**: Agregar, editar y confirmar cursos
@@ -29,12 +29,12 @@ Una aplicación web moderna para la gestión y manipulación de matrículas estu
 - **Validaciones Inteligentes**: Control de cupos y límites de créditos
 - **Historial de Matrículas**: Registro completo de todas las matrículas realizadas
 
-## 📋 Requisitos Previos
+##  Requisitos Previos
 
 - Node.js (v14 o superior)
 - npm o yarn
 
-## 🔧 Instalación y Ejecución
+##  Instalación y Ejecución
 
 ### 1. Clonar el repositorio
 ```bash
@@ -64,7 +64,7 @@ npm run build
 npm run preview
 ```
 
-## 👥 Datos de Prueba
+##  Datos de Prueba
 
 Para acceder a la aplicación, usa los siguientes ID de estudiantes:
 
@@ -72,7 +72,7 @@ Para acceder a la aplicación, usa los siguientes ID de estudiantes:
 - **ID 102**: Carolina Martinez - Ingeniería de Sistemas, Semestre 1
 - **ID 103**: Oscar Juanes - Ingeniería de Sistemas, Semestre 2 (No matriculado)
 
-## 🎯 Decisiones de Desarrollo Principales
+##  Decisiones de Desarrollo Principales
 
 ### 1. **Configuración de Tailwind CSS v4**
 - **Decisión**: Usar la importación moderna `@import 'tailwindcss'` en lugar de directives tradicionales
@@ -116,31 +116,6 @@ Para acceder a la aplicación, usa los siguientes ID de estudiantes:
 - **Cupos Disponibles**: Valida disponibilidad en tiempo real
 - **Estado Matriculado**: Solo estudiantes activos pueden matricularse
 
-## 📁 Estructura del Proyecto
-
-```
-src/
-├── components/
-│   ├── login/
-│   │   └── LoginScreen.jsx
-│   ├── Principal/
-│   │   ├── Header.jsx
-│   │   ├── StudentInfo.jsx
-│   │   ├── CourseList.jsx
-│   │   └── CourseCard.jsx
-│   ├── SelectedCoursesBar.jsx
-│   ├── ResumenMatricula.jsx
-│   ├── ConfirmacionFinal.jsx
-│   └── HistorialMatriculas.jsx
-├── data/
-│   ├── cursos.json
-│   └── estudiantes.json
-├── utils/
-│   └── validaciones.js
-├── App.jsx
-├── main.jsx
-└── index.css
-```
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -150,7 +125,7 @@ src/
 - **Lucide React**: Iconografía consistente
 - **localStorage API**: Persistencia de datos
 
-## 📚 Funcionalidades Detalladas
+## Funcionalidades Detalladas
 
 ### Flujo de Matrícula
 
@@ -171,38 +146,38 @@ src/
 - ✅ Verificación de estado de matriculación
 - ✅ Prevención de duplicados
 
-## 🎨 Paleta de Colores
+## Paleta de Colores
 
 - **Primario**: #2563EB (Azul)
 - **Secundario**: Verde (matrículas exitosas)
 - **Alerta**: Rojo (cursos sin cupos)
 - **Neutro**: Grises para interfaz estándar
 
-## 🔐 Seguridad
+##  Seguridad
 
 - Los datos se guardan localmente en el navegador
 - No se envían datos a servidores externos
 - Las contraseñas no son requeridas (sistema de demostración)
 
-## 📱 Responsividad
+##  Responsividad
 
 - **Móvil**: Optimizado para pantallas pequeñas
 - **Tablet**: Interfaz intermedia adaptada
 - **Desktop**: Experiencia completa con dos columnas
 - **Punto de quiebre**: 425px (oculta texto en botones pequeños)
 
-## ⚠️ Notas Importantes
+##  Notas Importantes
 
 - Los datos se guardan únicamente en localStorage del navegador
 - Al limpiar caché del navegador, se perderán los datos
 - Cada navegador tiene su propio almacenamiento independiente
 - Máximo de estudiantes registrados: 3 (expandible en `estudiantes.json`)
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las sugerencias y mejoras son bienvenidas. Por favor, abre un issue o crea un pull request.
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo licencia MIT.
 
