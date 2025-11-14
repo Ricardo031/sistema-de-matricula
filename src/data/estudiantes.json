@@ -1,0 +1,27 @@
+[
+  {
+    "id": 101,
+    "nombre": "Juan Pérez",
+    "carrera": "Ingeniería de Sistemas",
+    "semestre": 2,
+    "matriculado": true,
+    "creditosPermitidos": 20
+  },
+  {
+    "id": 102,
+    "nombre": "Carolina Martinez",
+    "carrera": "Ingeniería de Sistemas",
+    "semestre": 1,
+    "matriculado": true,
+    "creditosPermitidos": 20
+  },
+
+  {
+    "id": 103,
+    "nombre": "Oscar Juanes",
+    "carrera": "Ingeniería de Sistemas",
+    "semestre": 2,
+    "matriculado": false,
+    "creditosPermitidos": 20
+  }
+]
