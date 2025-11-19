@@ -1,6 +1,5 @@
-/**
- * Filtra los cursos disponibles según los criterios del estudiante
- */
+//* Filtra los cursos disponibles según los criterios del estudiante
+
 export const filtrarCursosDisponibles = (cursos, estudiante) => {
     if (!estudiante) return [];
 

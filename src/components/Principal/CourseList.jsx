@@ -31,7 +31,7 @@ function CourseList({
                     Cursos Disponibles - Semestre {estudiante.semestre}
                 </h2>
 
-                <div className="space-y-3">
+                <div className="space-y-5">
                     {cursos.map(curso => {
                         const yaSeleccionado = cursosSeleccionados.find(c => c.id === curso.id);
                         const puedeSeleccionar = puedeCursoSerSeleccionado(

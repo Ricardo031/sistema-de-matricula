@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LoginScreen from './components/login/LoginScreen';
 import Header from './components/Principal/Header';
 import StudentInfo from './components/Principal/StudentInfo';
@@ -25,12 +25,31 @@ function App() {
   const [modoEdicion, setModoEdicion] = useState(false);
   const [tieneCursosGuardados, setTieneCursosGuardados] = useState(false);
 
+  useEffect(() => {
+    const savedId = localStorage.getItem('estudianteId');
+    if (savedId) {
+      const estudianteEncontrado = estudianteData.find(est => est.id.toString() === savedId);
+      if (estudianteEncontrado) {
+        setEstudiante(estudianteEncontrado);
+
+        // Cargar la última matrícula guardada del estudiante
+        const matriculas = obtenerMatriculasPorEstudiante(parseInt(savedId));
+        if (matriculas.length > 0) {
+          const ultimaMatricula = matriculas[matriculas.length - 1];
+          setCursosSeleccionados(ultimaMatricula.cursos);
+          setTieneCursosGuardados(true);
+        }
+      }
+    }
+  }, []);
   //* Login
   const handleLogin = (id) => {
     const estudianteEncontrado = estudianteData.find(est => est.id.toString() === id);
     if (estudianteEncontrado) {
       setEstudiante(estudianteEncontrado);
-      
+
+      localStorage.setItem('estudianteId', id)
+
       // Cargar la última matrícula guardada del estudiante
       const matriculas = obtenerMatriculasPorEstudiante(parseInt(id));
       if (matriculas.length > 0) {

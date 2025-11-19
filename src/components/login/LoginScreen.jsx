@@ -5,11 +5,22 @@ import userSearchIcon from '../../assets/user-search.svg';
 
 function LoginScreen({ onLogin }) {
     const [studentId, setStudentId] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = () => {
-        if (studentId.trim()) {
-            onLogin(studentId);
+        if (!studentId.trim()) {
+            setError('Por favor ingresa un ID');
+            return;
         }
+
+        // IDs válidos: 101, 102, 103
+        const idsValidos = ['101', '102', '103'];
+        if (!idsValidos.includes(studentId.trim())) {
+            setError('ID no válido. Intenta con 101, 102 o 103');
+            return;
+        }
+
+        onLogin(studentId);
     };
 
     const handleKeyPress = (e) => {
@@ -41,7 +52,10 @@ function LoginScreen({ onLogin }) {
                             <input
                                 type="text"
                                 value={studentId}
-                                onChange={(e) => setStudentId(e.target.value)}
+                                onChange={(e) => {
+                                    setStudentId(e.target.value);
+                                    setError('');
+                                }}
                                 onKeyPress={handleKeyPress}
                                 placeholder="ID"
                                 style={{ padding: '10px 16px' }}
@@ -49,12 +63,18 @@ function LoginScreen({ onLogin }) {
                             />
                         </div>
 
+                        {error && (
+                            <div className="w-full sm:w-sm bg-red-100 border-l-4 border-red-500 text-red-700 p-3 rounded text-sm">
+                                {error}
+                            </div>
+                        )}
+
                         <button
                             onClick={handleSubmit}
                             style={{ padding: '10px 24px' }}
                             className="w-full sm:w-sm bg-[#2563EB] hover:bg-[#1f55ca] text-white font-normal rounded-lg transition flex items-center justify-center gap-2 cursor-pointer"
                         >
-                            <img src={loginIcon} alt="Login" className="w-5 h-5" /> 
+                            <img src={loginIcon} alt="Login" className="w-5 h-5" />
                             Ingresar Sesión
                         </button>
                     </div>
@@ -68,9 +88,9 @@ function LoginScreen({ onLogin }) {
             </div>
 
             <div className="hidden lg:flex w-1/2 items-center justify-center">
-                <img 
-                    src={ilustracion} 
-                    alt="Ilustración de matriculación" 
+                <img
+                    src={ilustracion}
+                    alt="Ilustración de matriculación"
                     className="max-w-full h-full object-cover"
                 />
             </div>

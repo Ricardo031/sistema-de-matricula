@@ -8,11 +8,11 @@ function ResumenMatricula({
     onVolver
 }) {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-8">
+        <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 px-4 py-8">
             <div className="max-w-4xl mx-auto">
                 <div className="bg-white rounded-lg shadow-xl p-8">
                     <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-                        Resumen de Matrícula
+                        Resumen de Matrícula    
                     </h1>
 
                     <div className="bg-indigo-50 border-2 border-indigo-200 rounded-lg p-6 mb-6">
